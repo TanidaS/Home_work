@@ -1,7 +1,7 @@
 <html>
         <head>
             <meta charset="utf-8">
-            <title>Landing page</title> 
+            <title>Register page</title> 
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
             <link rel="stylesheet" href="css/style.css">
             <link href="js/register.js">
@@ -29,11 +29,19 @@
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username*" value="" required>
             </div>
             <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password*" value ="" required>
-            </div>
-            <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Retype password*" value="" required>
+                <label for="passwordinput"></label>
+                <div >
+                  <input id="passwordinput" name="passwordinput" type="password" placeholder="Password* min 8 characters" class="form-control input-md" required="" minlength="8">
                 </div>
+              </div>
+                          
+              <div class="form-group">
+                <label for="confirm_password"></label>
+                <div>
+                  <input id="confirm_password" name="confirm_password" type="password" placeholder="Re-type password*" class="form-control input-md" required=""minlength="8"onkeyup="checkPass(); return false;">
+                </div>
+                <span id="confirmMessage" class="confirmMessage"></span>
+              </div>
                 <div class="form-group">
                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name*" value="" required>
                     </div>
@@ -54,7 +62,10 @@
                                       <input class="form-check-input" type="checkbox" value="" required> Agree with terms and conditions*
                                     </label>
                                   </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <div>
+                  <button id="submit" name="submit" class="btn btn-success">Submit</button>
+                </div>
+              </div>
         </form>
              
         </div>
